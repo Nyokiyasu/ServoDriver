@@ -29,11 +29,13 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:robocon_sch
+LIBS:YASU
+LIBS:ServoDriver-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 3
+Sheet 2 5
 Title ""
 Date ""
 Rev ""

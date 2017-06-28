@@ -30,6 +30,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:robocon_sch
 LIBS:YASU
+LIBS:stm32
 LIBS:ServoDriver-cache
 EELAYER 25 0
 EELAYER END
@@ -68,7 +69,7 @@ F 3 "" H 4550 1450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3300 1900 3200 1900
+	3200 1900 3300 1900
 Wire Wire Line
 	3400 1900 3500 1900
 Wire Wire Line
@@ -78,7 +79,7 @@ Wire Wire Line
 Wire Wire Line
 	4600 1900 4700 1900
 Wire Wire Line
-	3700 1900 3600 1900
+	3600 1900 3700 1900
 Wire Wire Line
 	3650 1900 3650 2000
 Connection ~ 3650 1900
@@ -246,17 +247,25 @@ F 3 "" H 1700 3000 50  0001 C CNN
 	1    1700 3000
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2250 1850 2250 1950
 $Comp
-L +5V #PWR?
-U 1 1 594C7987
+L +3.3V #PWR?
+U 1 1 594E28CB
 P 2250 1850
 F 0 "#PWR?" H 2250 1700 50  0001 C CNN
-F 1 "+5V" H 2250 1990 50  0000 C CNN
+F 1 "+3.3V" H 2250 1990 50  0000 C CNN
 F 2 "" H 2250 1850 50  0001 C CNN
 F 3 "" H 2250 1850 50  0001 C CNN
 	1    2250 1850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2250 1850 2250 1950
+	1750 2250 1650 2250
+Wire Wire Line
+	1650 2150 1750 2150
+Text HLabel 1650 2250 0    60   Input ~ 0
+RxD
+Text HLabel 1650 2150 0    60   Output ~ 0
+TxD
 $EndSCHEMATC

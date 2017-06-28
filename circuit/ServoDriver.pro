@@ -1,4 +1,4 @@
-update=2017/06/22 16:18:43
+update=2017/06/24 17:04:59
 version=1
 last_client=kicad
 [pcbnew]
@@ -60,3 +60,4 @@ LibName28=contrib
 LibName29=valves
 LibName30=C:/Users/mito3/Desktop/Robocon/Robocon_KicadLibrary2016_3_2/robocon_sch
 LibName31=C:/Program Files/KiCad/share/kicad/User/YASU/YASU
+LibName32=stm32

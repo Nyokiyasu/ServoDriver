@@ -30,6 +30,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:robocon_sch
 LIBS:YASU
+LIBS:stm32
 LIBS:ServoDriver-cache
 EELAYER 25 0
 EELAYER END

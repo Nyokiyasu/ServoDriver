@@ -36,7 +36,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 5
+Sheet 5 6
 Title ""
 Date ""
 Rev ""
@@ -69,29 +69,17 @@ F 3 "" H 4550 1450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3300 1900 3250 1900
+	3200 1900 3300 1900
 Wire Wire Line
-	3250 1900 3200 1900
+	3400 1900 3500 1900
 Wire Wire Line
-	3400 1900 3450 1900
+	4200 1900 4300 1900
 Wire Wire Line
-	3450 1900 3500 1900
+	4400 1900 4500 1900
 Wire Wire Line
-	4200 1900 4250 1900
+	4600 1900 4700 1900
 Wire Wire Line
-	4250 1900 4300 1900
-Wire Wire Line
-	4400 1900 4450 1900
-Wire Wire Line
-	4450 1900 4500 1900
-Wire Wire Line
-	4600 1900 4650 1900
-Wire Wire Line
-	4650 1900 4700 1900
-Wire Wire Line
-	3700 1900 3650 1900
-Wire Wire Line
-	3650 1900 3600 1900
+	3600 1900 3700 1900
 Wire Wire Line
 	3650 1900 3650 2000
 Connection ~ 3650 1900
@@ -145,9 +133,7 @@ $EndComp
 Wire Wire Line
 	3800 1900 3800 2250
 Wire Wire Line
-	2750 2250 3800 2250
-Wire Wire Line
-	3800 2250 4800 2250
+	2750 2250 4800 2250
 Wire Wire Line
 	4800 2250 4800 1900
 Wire Wire Line
@@ -213,9 +199,7 @@ F 3 "" H 2250 2350 50  0001 C CNN
 $EndComp
 Connection ~ 3800 2250
 Wire Wire Line
-	2750 2450 3900 2450
-Wire Wire Line
-	3900 2450 4900 2450
+	2750 2450 4900 2450
 Wire Wire Line
 	4900 2450 4900 1900
 Wire Wire Line

@@ -1,4 +1,4 @@
-update=2017/06/24 17:04:59
+update=2017/07/21 16:59:54
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=
+LibDir=C:/Software/KiCad/share/kicad/user
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -58,6 +58,7 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=C:/Users/mito3/Desktop/Robocon/Robocon_KicadLibrary2016_3_2/robocon_sch
-LibName31=C:/Program Files/KiCad/share/kicad/User/YASU/YASU
-LibName32=stm32
+LibName30=stm32
+LibName31=Robocon_KicadLibrary2016_3_2/robocon_sch
+LibName32=SamacSys/SamacSys_Parts
+LibName33=YASU/YASU

@@ -29,9 +29,6 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:stm32
-LIBS:robocon_sch
-LIBS:SamacSys_Parts
-LIBS:YASU
 LIBS:ServoDriver-cache
 EELAYER 25 0
 EELAYER END
@@ -226,7 +223,7 @@ F5 "BIT3" O R 1400 5150 60
 $EndSheet
 NoConn ~ 1850 4250
 NoConn ~ 1850 4350
-NoConn ~ 1850 4550
+NoConn ~ 8250 4550
 NoConn ~ 1850 4650
 NoConn ~ 8250 4750
 NoConn ~ 8250 4650
@@ -478,4 +475,8 @@ Wire Wire Line
 	8750 4450 8750 4250
 Wire Wire Line
 	9700 4350 10100 4350
+Text Label 1500 4550 0    60   ~ 0
+Servo5
+Wire Wire Line
+	1500 4550 1850 4550
 $EndSCHEMATC

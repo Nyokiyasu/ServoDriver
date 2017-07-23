@@ -29,6 +29,9 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:stm32
+LIBS:robocon_sch
+LIBS:SamacSys_Parts
+LIBS:YASU
 LIBS:ServoDriver-cache
 EELAYER 25 0
 EELAYER END

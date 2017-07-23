@@ -29,6 +29,9 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:stm32
+LIBS:robocon_sch
+LIBS:SamacSys_Parts
+LIBS:YASU
 LIBS:ServoDriver-cache
 EELAYER 25 0
 EELAYER END
@@ -116,7 +119,7 @@ U 1 1 5936F6B5
 P 5200 2550
 F 0 "R6" V 5280 2550 50  0000 C CNN
 F 1 "10k" V 5200 2550 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 5130 2550 50  0001 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5130 2550 50  0001 C CNN
 F 3 "" H 5200 2550 50  0000 C CNN
 	1    5200 2550
 	1    0    0    -1  

@@ -338,7 +338,7 @@ Wire Wire Line
 Wire Wire Line
 	4950 3250 4950 2950
 Wire Wire Line
-	5150 2950 4950 2950
+	4950 2950 5150 2950
 Wire Wire Line
 	5150 2500 5150 3250
 Wire Wire Line

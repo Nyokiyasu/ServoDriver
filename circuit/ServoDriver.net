@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:/Users/Yasu/Desktop/Robocon/ServoDriver/circuit/ServoDriver.sch)
-    (date "2017/07/25 12:39:51")
+    (date "2017/07/28 9:27:33")
     (tool "Eeschema 4.0.6")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -78,7 +78,7 @@
       (tstamp 594E91F1))
     (comp (ref BT1)
       (value Battery_Cell)
-      (footprint YASU:XT_M)
+      (footprint YASU:XT_Mdot)
       (libsource (lib device) (part Battery_Cell))
       (sheetpath (names /) (tstamps /))
       (tstamp 5954C4A7))

@@ -1,22 +1,10 @@
-/**
-  ******************************************************************************
-  * @file    main.c
-  * @author  Ac6
-  * @version V1.0
-  * @date    01-December-2013
-  * @brief   Default main function.
-  ******************************************************************************
-*/
-
-
-#include "stm32f0xx.h"
-			
-
-int main(void)
-{
-
-	for(;;);
-}
+/*
+ * Servo_func.c
+ *
+ *  Created on: 2017/07/28
+ *      Author: Yasu
+ */
+#include "Servo.h"
 
 /* -------------------------------------------------
  * @ä÷êîñº		:	RotarySW_init

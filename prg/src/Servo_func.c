@@ -99,7 +99,6 @@ void DrivePorts_init(void)
 	GPIO_Init(GPIOB,&init_gpio);
 	GPIO_PinAFConfig(GPIOA,GPIO_PinSource0,GPIO_AF_1);
 
-
 	/*timer2 ch1,ch2.ch3*/
 	init_tmr.TIM_Period = 1440-1;
 	init_tmr.TIM_Prescaler = 100-1;
@@ -116,7 +115,6 @@ void DrivePorts_init(void)
 	TIM_OC2Init(TIM2,&init_OC);
 	TIM_OC3Init(TIM2,&init_OC);
 	TIM_ARRPreloadConfig(TIM2,ENABLE);
-
 	/*timer3 ch1,ch2,ch3*/
 	init_tmr.TIM_Period = 1440-1;
 	init_tmr.TIM_Prescaler = 100-1;
@@ -137,4 +135,38 @@ void DrivePorts_init(void)
 	TIM_Cmd(TIM2,ENABLE);
 	TIM_Cmd(TIM3,ENABLE);
 	return;
+}
+
+/* -------------------------------------------------
+ * @関数名		:
+ * @概要			:
+ * @引数 -ch		：
+ * 		-value	：
+ * @戻り値		:
+ * ---------------------------------------------- */
+void Servo_Drive(uint8_t ch , uint16_t value)
+{
+	if((0<value) && (value<1441))
+	{
+		switch(ch){
+		case 0:
+			TIM_SetCompare1(TIM2,value);
+			break;
+		case 1:
+			TIM_SetCompare2(TIM2,value);
+			break;
+		case 2:
+			TIM_SetCompare3(TIM2,value);
+			break;
+		case 3:
+			TIM_SetCompare1(TIM3,value);
+			break;
+		case 4:
+			TIM_SetCompare2(TIM3,value);
+			break;
+		case 5:
+			TIM_SetCompare3(TIM3,value);
+			break;
+		}
+	}
 }

@@ -26,7 +26,6 @@ void RotarySW_init(void)
 	return;
 }
 
-
 /* -------------------------------------------------
  * @関数名		:	RotarySW_read
  * @概要		:	RotarySWの読出し
@@ -65,7 +64,6 @@ void LED_init(void)
 
 	return;
 }
-
 
 /* -------------------------------------------------
  * @関数名		:
@@ -141,12 +139,12 @@ void DrivePorts_init(void)
  * @関数名		:
  * @概要			:
  * @引数 -ch		：
- * 		-value	：
+ * 		-value	：0~1440
  * @戻り値		:
  * ---------------------------------------------- */
 void Servo_Drive(uint8_t ch , uint16_t value)
 {
-	if((0<value) && (value<1441))
+	if(value<1441)
 	{
 		switch(ch){
 		case 0:

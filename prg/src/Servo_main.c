@@ -24,8 +24,15 @@ int main(void)
 	RotarySW_init();
 	DrivePorts_init();
 
-
 	addr = RotarySW_Read();
-	for(;;);
+	for(;;)
+	{
+		Servo_Drive(0,240);
+		Servo_Drive(1,480);
+		Servo_Drive(2,720);
+		Servo_Drive(3,960);
+		Servo_Drive(4,1200);
+		Servo_Drive(5,1440);
+	}
 }
 

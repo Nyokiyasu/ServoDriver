@@ -42,12 +42,25 @@ uint8_t CanInit()
 	return init;
 }
 
-void CanFilterInit(uint8_t id, uint8_t mode, uint8_t scale, uint8_t fifo)
+void CanFilterInit(uint8_t id, uint8_t mask, uint8_t mode, uint8_t num, uint8_t scale, uint8_t fifo)
 {
+	//下の構造体に合わせて引数idとmaskをどうにかする
 
+	CAN_FilterInitTypeDef FilterInitStructure;
+	FilterInitStructure.CAN_FilterScale = scale;
+//	FilterInitStructure.CAN_FilterIdHigh =;
+//	FilterInitStructure.CAN_FilterIdLow  =;
+//	FilterInitStructure.CAN_FilterMaskIdHigh =;
+//	FilterInitStructure.CAN_FilterMaskIdLow  =;
+	FilterInitStructure.CAN_FilterMode = mode;
+	FilterInitStructure.CAN_FilterFIFOAssignment = fifo;
+	FilterInitStructure.CAN_FilterNumber = num;
+	FilterInitStructure.CAN_FilterActivation = ENABLE;
+
+	CAN_FilterInit(&FilterInitStructure);
 }
 
 void CanReceive(uint8_t fifo, CanRxMsg* RxStructure)
 {
-
+	CAN_Receive(CAN, fifo, RxStructure);
 }

@@ -13,7 +13,7 @@ uint8_t CanInit()
 	uint8_t init;
 
 	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
-	RCC_APB1PeriphClockCmd(RCC_APB1PeriphClockCmd, ENABLE);
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_CAN, ENABLE);
 
 	GPIO_InitTypeDef GPIOInitStructure;
 	GPIOInitStructure.GPIO_Mode  = GPIO_Mode_AF;
@@ -37,7 +37,7 @@ uint8_t CanInit()
 	CANInitStructure.CAN_RFLM = ENABLE;
 	CANInitStructure.CAN_TXFP = DISABLE;
 //	CANInitStructure.CAN_Prescaler = ;
-	init = CAN_init(CAN, &CANInitStructure);
+	init = CAN_Init(CAN, &CANInitStructure);
 
 	return init;
 }

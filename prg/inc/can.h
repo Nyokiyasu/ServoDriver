@@ -6,7 +6,7 @@
  */
 
 
-void CanInit();
+uint8_t CanInit();
 
 void CanFilterInit(uint8_t id, uint8_t mode, uint8_t scale, uint8_t fifo);
 

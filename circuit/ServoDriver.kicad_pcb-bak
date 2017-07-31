@@ -68,7 +68,7 @@
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFFFF)
     (pcbplotparams
-      (layerselection 0x01400_80000000)
+      (layerselection 0x01000_80000000)
       (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.100000)
@@ -91,7 +91,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory gbr_BCu/))
+      (outputdirectory gbr_nomal/))
   )
 
   (net 0 "")

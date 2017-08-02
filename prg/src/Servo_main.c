@@ -14,7 +14,7 @@
 
 int main(void)
 {
-	uint8_t addr;
+	uint8_t addr=0;
 
 	/*メインクロックを8MHzから48MHzへ変更*/
 	RCC_PLLConfig(RCC_PLLSource_HSI_Div2,RCC_PLLMul_12);
@@ -23,6 +23,12 @@ int main(void)
 
 	RotarySW_init();
 	DrivePorts_init();
+	LED_init();
+
+	SysTick_Config(48000);	//systickTimerを1msに設定
+
+	GPIO_SetBits(GPIOA,GPIO_Pin_15);
+	GPIO_SetBits(GPIOB,GPIO_Pin_4);
 
 	addr = RotarySW_Read();
 	for(;;)

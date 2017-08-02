@@ -165,8 +165,8 @@ Text HLabel 4950 3150 0    60   Output ~ 0
 BIT0
 Text HLabel 4950 3050 0    60   Output ~ 0
 BIT1
-Text HLabel 4950 2950 0    60   Output ~ 0
-BIT2
 Text HLabel 4950 2750 0    60   Output ~ 0
+BIT2
+Text HLabel 4950 2950 0    60   Output ~ 0
 BIT3
 $EndSCHEMATC

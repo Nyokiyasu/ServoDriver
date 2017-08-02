@@ -6,6 +6,9 @@
  */
 #include "Servo.h"
 
+int timingDelay_ms;
+int gSystemTimer_ms;
+
 /* -------------------------------------------------
  * @関数名		:	RotarySW_init
  * @概要		:	RotarySWに使うGPIOの初期化
@@ -34,11 +37,11 @@ void RotarySW_init(void)
 uint8_t RotarySW_Read(void)
 {
 	uint8_t data=0;
-	data = data|GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_5) << 0;
-	data = data|GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_6) << 1;
-	data = data|GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_7) << 2;
-	data = data|GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_8) << 3;
-	return data;
+	data = data|GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_5) << 0;
+	data = data|GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_6) << 1;
+	data = data|GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_8) << 2;
+	data = data|GPIO_ReadInputDataBit(GPIOB,GPIO_Pin_7) << 3;
+	return ~data&0x0F;
 }
 
 /* -------------------------------------------------
@@ -77,6 +80,7 @@ void DrivePorts_init(void)
 	GPIO_InitTypeDef init_gpio;
 
 	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
+	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOB, ENABLE);
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2,ENABLE);
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3,ENABLE);
 
@@ -132,6 +136,13 @@ void DrivePorts_init(void)
 
 	TIM_Cmd(TIM2,ENABLE);
 	TIM_Cmd(TIM3,ENABLE);
+
+	Servo_Drive(0,0);
+	Servo_Drive(1,0);
+	Servo_Drive(2,0);
+	Servo_Drive(3,0);
+	Servo_Drive(4,0);
+	Servo_Drive(5,0);
 	return;
 }
 
@@ -167,4 +178,16 @@ void Servo_Drive(uint8_t ch , uint16_t value)
 			break;
 		}
 	}
+}
+
+/* -------------------------------------------------
+ * @関数名	:	SysTick_Handler
+ * @概要	:	SystickTimerの割り込みルーチン
+ * 				SysTick_Configで設定した値(frq)で割り込み周期が決まる
+ * 				周期はSystemClock/frq[Hz]
+ * ---------------------------------------------- */
+void SysTick_Handler(void)
+{
+	gSystemTimer_ms++;
+	if(timingDelay_ms)	timingDelay_ms--;
 }

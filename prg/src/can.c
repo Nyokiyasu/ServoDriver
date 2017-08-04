@@ -21,22 +21,22 @@ uint8_t CanInit()
 	GPIOInitStructure.GPIO_Pin   = GPIO_Pin_11 | GPIO_Pin_12;
 	GPIO_Init(GPIOA, &GPIOInitStructure);
 
-	GPIO_PinAFConfig(GPIOA, GPIO_PinSource11, GPIO_AF_0);
-	GPIO_PinAFConfig(GPIOA, GPIO_PinSource12, GPIO_AF_0);
+	GPIO_PinAFConfig(GPIOA, GPIO_PinSource11, GPIO_AF_4);
+	GPIO_PinAFConfig(GPIOA, GPIO_PinSource12, GPIO_AF_4);
 
 	CAN_DeInit(CAN);
 	CAN_InitTypeDef CANInitStructure;
 	CANInitStructure.CAN_Mode = CAN_Mode_Normal;
-	CANInitStructure.CAN_SJW  = CAN_SJW_1tq;
-//	CANInitStructure.CAN_BS1  = CAN_BS1_tq;
-//	CANInitStructure.CAN_BS2  = CAN_BS2_tq;
-	CANInitStructure.CAN_TTCM = DISABLE;
+	CANInitStructure.CAN_SJW = CAN_SJW_1tq;
+    CANInitStructure.CAN_BS1 = CAN_BS1_8tq;
+    CANInitStructure.CAN_BS2 = CAN_BS2_6tq;
+    CANInitStructure.CAN_TTCM = DISABLE;
 	CANInitStructure.CAN_ABOM = DISABLE;
 	CANInitStructure.CAN_AWUM = DISABLE;
 	CANInitStructure.CAN_NART = DISABLE;
 	CANInitStructure.CAN_RFLM = ENABLE;
 	CANInitStructure.CAN_TXFP = DISABLE;
-//	CANInitStructure.CAN_Prescaler = ;
+	CANInitStructure.CAN_Prescaler = 2;
 	init = CAN_Init(CAN, &CANInitStructure);
 
 	return init;

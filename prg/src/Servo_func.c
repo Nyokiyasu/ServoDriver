@@ -99,7 +99,7 @@ void DrivePorts_init(void)
 	init_gpio.GPIO_Pin = GPIO_Pin_0;
 	init_gpio.GPIO_Mode = GPIO_Mode_AF;
 	GPIO_Init(GPIOB,&init_gpio);
-	GPIO_PinAFConfig(GPIOA,GPIO_PinSource0,GPIO_AF_1);
+	GPIO_PinAFConfig(GPIOB,GPIO_PinSource0,GPIO_AF_1);
 
 	/*timer2 ch1,ch2.ch3*/
 	init_tmr.TIM_Period = 1440-1;
